@@ -1,6 +1,6 @@
 # CGV 홈페이지 클론코딩
 
-과제 결과물 :
+과제 결과물 : https://dmswl2030.github.io/Clone-CGV/
 원본 사이트 : https://www.cgv.co.kr/#none
 
 ## 라이브러리
