@@ -31,6 +31,15 @@ button {
   font-size: 14px;
   cursor: pointer;
 }
+.btn-switch {
+  display: none;
+}
+.chart-strong {
+  font-weight: 700;
+}
+.imgHover__area {
+  display: none;
+}
 
 /* HEADER */
 header {
@@ -358,22 +367,25 @@ header
 .swiper__movie .swiper-container .movie-list__title .list-title-moviechart {
   padding-right: 10px;
   border-right: 1px solid #cacaca;
+  cursor: pointer;
 }
 .swiper__movie .swiper-container .movie-list__title .list-title-schedule {
   padding-left: 10px;
+  cursor: pointer;
 }
-.swiper__movie .swiper-container .swiper-wrapper {
+.swiper__movie .swiper-container .movie-chart .swiper-wrapper {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-.swiper__movie .swiper-container .swiper-wrapper .swiper-slide {
+.swiper__movie .swiper-container .movie-chart .swiper-wrapper .swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 100%;
 }
+
 .swiper__movie .swiper-container .swiper-prev,
 .swiper__movie .swiper-container .swiper-next {
   width: 42px;
@@ -402,12 +414,26 @@ header
   right: 0;
 }
 
-.swiper__movie .swiper-container .swiper-wrapper .swiper-slide .item-thumb {
+.swiper__movie
+  .swiper-container
+  .movie-chart
+  .swiper-wrapper
+  .swiper-slide
+  .item-thumb {
   border-radius: 10px;
   display: inline-block;
+  position: relative;
 }
 .swiper .swiper-container .swiper-wrapper .swiper-slide .item-thumb:hover {
   background-color: #333;
+}
+.swiper
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide
+  .item-thumb:hover
+  .imgHover__area {
+  display: block;
 }
 .swiper__movie
   .swiper-container
@@ -425,6 +451,48 @@ header
   .item-thumb:hover
   > img {
   opacity: 0.3;
+}
+.swiper__movie
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide
+  .item-thumb:hover
+  > .imgHover__area {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+.swiper__movie
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide
+  .item-thumb:hover
+  > .imgHover__area
+  > button {
+  width: 120px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.swiper__movie
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide
+  .item-thumb:hover
+  > .imgHover__area
+  > .movie-detail {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+}
+.swiper__movie
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide
+  .item-thumb:hover
+  > .imgHover__area
+  > .movie-reservation {
+  background-color: #fb4357;
 }
 .swiper .swiper-container .swiper-wrapper .swiper-slide .item-sub {
   display: flex;

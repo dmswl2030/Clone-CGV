@@ -26,3 +26,29 @@ itemHover.forEach((el, index) => {
     imgArea.src = `./images/special_${index + 1}.png`;
   };
 });
+
+//차트 클릭 switch
+const movieChart = document.querySelector(".list-title-moviechart");
+const movieSchedule = document.querySelector(".list-title-schedule");
+const btnSwitch = document.querySelector(".btn-switch");
+const movieSwiper = document.querySelectorAll(".movie-chart");
+
+function chartSwitch(event) {
+  const eventTarget = event.target;
+
+  if (eventTarget === movieChart) {
+    eventTarget.classList.add("chart-strong");
+    movieSchedule.classList.remove("chart-strong");
+    movieSwiper[1].classList.add("btn-switch");
+    movieSwiper[0].classList.remove("btn-switch");
+    console.log("무비차트");
+  } else if (eventTarget === movieSchedule) {
+    eventTarget.classList.add("chart-strong");
+    movieChart.classList.remove("chart-strong");
+    movieSwiper[0].classList.add("btn-switch");
+    movieSwiper[1].classList.remove("btn-switch");
+    console.log("상영예정작");
+  }
+}
+movieChart.addEventListener("click", chartSwitch);
+movieSchedule.addEventListener("click", chartSwitch);

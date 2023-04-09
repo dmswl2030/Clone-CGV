@@ -1,6 +1,6 @@
 const swiperPrev = document.querySelector(".swiper-prev");
 
-new Swiper(".swiper__movie .swiper-container", {
+new Swiper(".swiper__movie .swiper-container .movie-chart", {
   slidesPerView: 5, // 한 번에 보여줄 슬라이드 개수
   spaceBetween: 30, // 슬라이드 사이 여백
   slidesPerGroup: 5, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
